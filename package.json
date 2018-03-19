@@ -1,0 +1,39 @@
+{
+    "name": "ToDo List",
+    "version": "1.0.0",
+    "description": "A simple to do list made with HTML5, CSS3 and Materialize css",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ToDo",
+        "List",
+        "gulp",
+        "HTML5",
+        "CSS3",
+        "Materialize css",
+        "Vanilla Js",
+        "Projects",
+        "Jeandre",
+        "Melaria",
+        "www.jeandremelaria.nl"
+    ],
+    "author": "Jeandre Melaria",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^8.1.0",
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssnano": "^2.1.2",
+        "gulp-htmlmin": "^4.0.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.0",
+        "pump": "^3.0.0"
+    },
+    "dependencies": {
+        "materialize-css": "^0.100.2",
+        "npm": "^5.7.1"
+    }
+}
