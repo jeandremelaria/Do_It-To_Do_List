@@ -24,17 +24,33 @@ Last modified:
     <meta name="robots" content="index, nofollow">
     <!-- /Meta Tag -->
 
-    <title>ToDo List</title>
+    <title>Do It - To Do List</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+
+    <!--Import style.css-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- W3.js -->
+    <script src="js/w3/w3.js"></script>
 </head>
 
 <body>
+    <!-- container -->
+    <div class="container">
+        <!-- preloader -->
+        <div w3-include-html="includes/preloader.html"></div>
+        <!-- /preloader -->
+    </div>
+    <!-- /container -->
 
+    <script>
+        w3.includeHTML();
+    </script>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
