@@ -21,75 +21,129 @@ Last modified:
 @containerBgColor: #333;
 @leftBgColor: rgba(75,0,130, 0.6);
 @leftButtonHoverColor: rgba(161, 11, 11, 0.3);
-@rightBgColor:rgba (43, 43, 43, 0.8);
+@rightBgColor:rgba(43, 43, 43, 0.8);
 @rightButtonHoverColor: rgba(92, 92, 92, 0.3);
 @hoverWidth:75%;
-@otherWith:25%;
+@otherWidth:25%;
 @speed:1000ms;
 @font: 'Franklin Gothic Medium','Arial Narrow','Arial','sans-serif';
 @fontSize:4rem;
 
-
 // === === Functions === === //
 
 // === === Mixings === === //
+.container-fluid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:@containerBgColor;
+}
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
 .button {
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   left: 50%;
-  top:40%;
-  height:2.5rem;
-  padding-top:1.3rem;
-  width:15rem;
-  text-align:center;
-  color:#fff;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
   border: #fff solid 0.2rem;
   font-size: (@fontSize - 3rem);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
 }
-
-.splitLeft .button:hover {
-  background-color:@leftButtonHoverColor;
-  border-color:@leftButtonHoverColor;
-}
-.splitRight .button:hover {
-  background-color:@rightButtonHoverColor;
-  border-color:@rightButtonHoverColor;
-}
-.container-fluid {
-  position: relative;
-  width: 100%;
-  height:100%;
-  background:@containerBgColor;
-}
-.split {
-  position: absolute;
-  width:50%;
-  height: 100%;
-  overflow:hidden;
-}
-
-.split.left {
+// Split left
+.div__leftSplit {
   left:0;
-  background: url('../img/todo.jpg') center center no-repeat;
+  background: url(../img/todo.jpg) center center no-repeat;
   background-size: cover;
+
+  .button:hover {
+    background-color:@leftButtonHoverColor;
+    border-color: @leftButtonHoverColor;
+  }
+
+  &:before {
+    position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background:@leftBgColor;
+  }
 }
-.split.left:before {
-  position: absolute;
-  content:"";
-  width: 100%;
-  height: 100%;
-  background:@leftBgColor;
-}
-.split.right {
-  right:0;
-  background: url('../img/writing.jpg') center center no-repeat;
-  background-size: cover;
+.hover-left {
+  .div__leftSplit {
+    width:75%;
+  }
+  .div__rightSplit {
+    width:25%;
+  }
+  
 }
 
+// .hover-left, .div__leftSplit {
+//   width: @hoverWidth;
+// }
+// .hover-left, .div__rightSplit {
+//   width: @otherWidth;
+// }
+// .hover-left, .div__rightSplit:before {
+//   z-index: 2;
+// }
+
+// Split right
+.div__rightSplit {
+  right:0;
+  background: url(../img/writing.jpg) center center no-repeat;
+  background-size: cover;
+
+  .button:hover {
+    background-color:@rightButtonHoverColor;
+    border-color: @rightButtonHoverColor;
+  }
+
+  &:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: @rightBgColor;
+  }
+}
+
+// .hover-right, .div__rightSplit {
+//   width: @hoverWidth;
+// }
+// .hover-right, .div__leftSplit {
+//   width: @otherWidth;
+// }
+// .hover-right, .div__leftSplit:before {
+//   z-index: 2;
+// }
+
+// .div__leftSplit, .div__rightSplit, .div__rightSplit:before, .div__leftSplit:before {
+//   transition:@speed all ease-in-out;
+// }
+
+.formSignIn {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top:40%;
+  width: 60%;
+  background-color:rgba(255,255,255, 0.8);
+  border-radius: 5px;
+
+}
 // === === Global === === //
 html, body {
   margin:0;
@@ -101,12 +155,11 @@ html, body {
 }
 h1 {
   font-size: @fontSize;
-  color:white;
+  color:#fff;
   position: absolute;
   left:50%;
   top:20%;
   transform:translateX(-50%);
   white-space: nowrap;
 }
-
 // === === Media queries === === //

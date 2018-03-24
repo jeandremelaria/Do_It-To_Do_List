@@ -1,19 +1,24 @@
-var left = document.querySelector('.left');
-var right = document.querySelector('.right');
-var container = document.querySelector('.container');
+$(function() {
 
-left.addEventListener('mouseenter', function() {
-    container.classList.add('hover-left');
-});
+    var left = document.querySelector('.div__leftSplit');
+    var right = document.querySelector('.div__rightSplit');
+    var container = document.querySelector('.container-fluid');
 
-left.addEventListener('mouseleave', function() {
-    container.classList.remove('hover-left');
-});
+    left.addEventListener('mouseenter', function() {
+        container.classList.add('hover-left');
+        console.log('hover left');
+    });
 
-right.addEventListener('mouseenter', function() {
-    container.classList.add('hover-right');
-});
+    left.addEventListener('mouseleave', function() {
+        container.classList.remove('hover-left');
+    });
 
-right.addEventListener('mouseleave', function() {
-    container.classList.remove('hover-right');
+    right.addEventListener('mouseenter', function() {
+        container.classList.add('hover-right');
+        console.log('hover right')
+    });
+
+    right.addEventListener('mouseleave', function() {
+        container.classList.remove('hover-right');
+    });
 });
