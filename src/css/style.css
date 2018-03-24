@@ -60,6 +60,16 @@ Last modified:
 .hover-left .div__rightSplit {
   width: 25%;
 }
+.hover-right .div__rightSplit {
+  width: 75%;
+}
+.hover-right .div__leftSplit {
+  width: 25%;
+}
+.div__rightSplit,
+.div__leftSplit {
+  transition: 1000ms all ease-in-out;
+}
 .div__rightSplit {
   right: 0;
   background: url(../img/writing.jpg) center center no-repeat;
@@ -102,4 +112,17 @@ h1 {
   top: 20%;
   transform: translateX(-50%);
   white-space: nowrap;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .button {
+    width: 12rem;
+  }
+}
+@media (max-height: 700px) {
+  .button {
+    top: 70%;
+  }
 }

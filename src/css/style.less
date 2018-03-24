@@ -83,22 +83,30 @@ Last modified:
 .hover-left {
   .div__leftSplit {
     width:75%;
+
   }
   .div__rightSplit {
     width:25%;
-  }
+
+  } 
   
 }
 
-// .hover-left, .div__leftSplit {
-//   width: @hoverWidth;
-// }
-// .hover-left, .div__rightSplit {
-//   width: @otherWidth;
-// }
-// .hover-left, .div__rightSplit:before {
-//   z-index: 2;
-// }
+.hover-right {
+  .div__rightSplit {
+    width:75%;
+   
+  }
+  .div__leftSplit {
+    width:25%;
+    
+  } 
+
+}
+
+.div__rightSplit, .div__leftSplit {
+  transition: @speed all ease-in-out;
+}
 
 // Split right
 .div__rightSplit {
@@ -119,20 +127,6 @@ Last modified:
     background: @rightBgColor;
   }
 }
-
-// .hover-right, .div__rightSplit {
-//   width: @hoverWidth;
-// }
-// .hover-right, .div__leftSplit {
-//   width: @otherWidth;
-// }
-// .hover-right, .div__leftSplit:before {
-//   z-index: 2;
-// }
-
-// .div__leftSplit, .div__rightSplit, .div__rightSplit:before, .div__leftSplit:before {
-//   transition:@speed all ease-in-out;
-// }
 
 .formSignIn {
   display: block;
@@ -163,3 +157,18 @@ h1 {
   white-space: nowrap;
 }
 // === === Media queries === === //
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media(max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
