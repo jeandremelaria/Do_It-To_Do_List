@@ -6,7 +6,6 @@ $(function() {
 
     left.addEventListener('mouseenter', function() {
         container.classList.add('hover-left');
-        console.log('hover left');
     });
 
     left.addEventListener('mouseleave', function() {
@@ -15,7 +14,6 @@ $(function() {
 
     right.addEventListener('mouseenter', function() {
         container.classList.add('hover-right');
-        console.log('hover right')
     });
 
     right.addEventListener('mouseleave', function() {

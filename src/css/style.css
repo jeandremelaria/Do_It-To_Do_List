@@ -40,7 +40,7 @@ Last modified:
 }
 .div__leftSplit {
   left: 0;
-  background: url(../img/todo.jpg) center center no-repeat;
+  background: url(../img/todo1.jpeg) center center no-repeat;
   background-size: cover;
 }
 .div__leftSplit .button:hover {
@@ -52,7 +52,7 @@ Last modified:
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(75, 0, 130, 0.6);
+  background: rgba(75, 0, 130, 0.8);
 }
 .hover-left .div__leftSplit {
   width: 75%;
@@ -72,7 +72,7 @@ Last modified:
 }
 .div__rightSplit {
   right: 0;
-  background: url(../img/writing.jpg) center center no-repeat;
+  background: url(../img/writing1.jpg) center center no-repeat;
   background-size: cover;
 }
 .div__rightSplit .button:hover {
