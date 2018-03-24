@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     cssnano = require('gulp-cssnano'),
     concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     htmlmin = require('gulp-htmlmin');
@@ -13,6 +14,13 @@ const gulp = require('gulp'),
 gulp.task('message', function() {
     return console.log('Gulp is running...');
 });
+
+//---- MINIFY IMAGES ----//
+gulp.task('img', () =>
+    gulp.src('src/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img'))
+);
 
 //---- GULP PREFIXER AND CSS NANO ----//
 gulp.task('prefixerAndCssNano', function() {
@@ -47,10 +55,11 @@ gulp.task('copyHtml', function() {
 });
 
 //---- RUN MULTIPLE TASKS AT ONCE IN ARRAY ----//
-gulp.task('default', ['message', 'prefixerAndCssNano', 'minifyJs', 'copyHtml']);
+gulp.task('default', ['message', 'img', 'prefixerAndCssNano', 'minifyJs', 'copyHtml']);
 
 //---- GULP WATCH ----//js
 gulp.task('watch', function() {
+    gulp.watch('src/img/*', ['img']);
     gulp.watch('src/js/*.js', ['minifyJs']);
     gulp.watch('src/css/*.css', ['prefixerAndCssNano']);
     gulp.watch('src/includes/*.html', ['copyHtml']);
