@@ -59,6 +59,11 @@ Last modified:
   height: 100%;
   background: rgba(75, 0, 130, 0.6);
 }
+.split.right {
+  right: 0;
+  background: url('../img/writing.jpg') center center no-repeat;
+  background-size: cover;
+}
 html,
 body {
   margin: 0;
