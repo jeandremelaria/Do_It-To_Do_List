@@ -107,7 +107,9 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-h1 {
+h1,
+h5,
+h6 {
   font-size: 4rem;
   color: #fff;
   position: absolute;
@@ -115,6 +117,14 @@ h1 {
   top: 20%;
   transform: translateX(-50%);
   white-space: nowrap;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  top: 30%;
+  font-size: 1rem;
+  color: #d3d3d3;
 }
 @media (max-width: 800px) {
   h1 {

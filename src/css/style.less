@@ -32,6 +32,7 @@ Last modified:
 //color
 @purple:purple;
 @mediumorchid:#BA55D3;
+@lightGrey:#d3d3d3;
 
 // === === Functions === === //
 
@@ -154,7 +155,7 @@ html, body {
   height: 100%;
   overflow-x:hidden;
 }
-h1 {
+h1, h5, h6 {
   font-size: @fontSize;
   color:#fff;
   position: absolute;
@@ -162,6 +163,15 @@ h1 {
   top:20%;
   transform:translateX(-50%);
   white-space: nowrap;
+}
+
+h5 {
+  font-size: (@fontSize - 2rem);
+}
+h6 {
+  top:30%;
+  font-size: (@fontSize - 3rem);
+  color:@lightGrey;
 }
 // === === Media queries === === //
 @media(max-width: 800px) {
