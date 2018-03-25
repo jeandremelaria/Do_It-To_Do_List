@@ -95,6 +95,9 @@ Last modified:
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
 }
+.btn-large {
+  width: 100%;
+}
 html,
 body {
   margin: 0;
